@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        //nemmmüködik még ez a program
-        int n=10;
+        int n=1000;
         int s=0;
         ArrayList<Integer> prímek = new ArrayList<Integer>();
         prímek.add(2);
@@ -14,7 +13,7 @@ public class Main {
         {
             int j=0;
             while(i%prímek.get(j)!=0&&j<prímek.size()-1) j++;
-            if(i%prímek.get(j)==0) prímek.add(i);
+            if(i%prímek.get(j)!=0) prímek.add(i);
         }
         for(int i=1; i<=n; i++)
         {
@@ -32,6 +31,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(s);
+        System.out.println(s + " darab");
     }
 }
